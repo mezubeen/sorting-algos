@@ -32,8 +32,6 @@ The selection sort algorithm, similar to Bubble Sort in that it shares O(n²) co
 1. Continue until you reach the end of the array.
 1. If the minimum value (index) is not the item (index) you started with, swap them.
 
-[Source](https://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
-
 #### [Practice with this interactive card game](https://www.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting)
 
 We'll need two functions, one to handle our swapping, and one to handle the rest of the sorting logic.
@@ -73,6 +71,9 @@ function selectionSort(arr) {
     return arr;
 }
 ```
+
+[Source](https://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/)
+
 # Afternoon Lecture
 ## Quick Sort
 > Quicksort is a divide and conquer algorithm in the style of merge sort. The basic idea is to find a “pivot” item in the array to compare all other items against, then shift items such that all of the items before the pivot are less than the pivot value and all the items after the pivot are greater than the pivot value. After that, recursively perform the same operation on the items before and after the pivot.
