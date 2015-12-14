@@ -131,8 +131,8 @@ function quickSort(items, left, right) {
     // than length of 1 is returned
     if (items.length > 1) {
         // if no left or right is entered, set them to first and last indeces in array
-        left = typeof left != "number" ? 0 : left;
-        right = typeof right != "number" ? items.length - 1 : right;
+        left = typeof left !== "number" ? 0 : left;
+        right = typeof right !== "number" ? items.length - 1 : right;
         // set index to return value of partition function
         index = partition(items, left, right);
         // compare current left value to index - 1
