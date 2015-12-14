@@ -10,6 +10,7 @@
 [Source](https://www.techopedia.com/definition/3757/bubble-sort)
 
 **Pseudo code:**
+
 1. Compare the first item to the second item.
 1. If the first item should be after the second item, swap them.
 1. Compare the second item to the third item.
@@ -24,6 +25,7 @@
 The selection sort algorithm, similar to Bubble Sort in that it shares O(n²) complexity, augments the Bubble Sort algorithm slightly. Instead of comparing each array item to its neighbor, the goal is to locate the *smallest* remaining value and drop it into the correct place in the array. The basic algorithm looks like this:
 
 **Pseudo code:**
+
 1. Assume the first item is the smallest value (minimum).
 1. Compare this item to the second item.
 1. If the second item is smaller than the first, set the second item as the new minimum.
@@ -78,6 +80,7 @@ function selectionSort(arr) {
 > There are two basic operations in the algorithm, swapping items in place and partitioning a section of the array. The basic steps to partition an array are:
 
 **Pseudo code:**
+
 1. Find a “pivot” item in the array. This item is the basis for comparison for a single round.
 1. Start a pointer (the left pointer) at the first item in the array.
 1. Start a pointer (the right pointer) at the last item in the array.
