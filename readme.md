@@ -129,7 +129,7 @@ function quickSort(items, left, right) {
     // if statement to handle the base case (any array smaller
     // than length of 1 is returned
     if (items.length > 1) {
-        // if no left or right is entered, set them to left and right indeces
+        // if no left or right is entered, set them to first and last indeces in array
         left = typeof left != "number" ? 0 : left;
         right = typeof right != "number" ? items.length - 1 : right;
         // set index to return value of partition function
@@ -153,3 +153,4 @@ function quickSort(items, left, right) {
     return items;
 }
 ```
+[Source](https://www.nczonline.net/blog/2012/11/27/computer-science-in-javascript-quicksort/)
