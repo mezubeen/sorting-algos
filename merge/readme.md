@@ -9,6 +9,8 @@
 
 ![Merge Sort](./merge.png)
 
+Merge function:
+
 ```js
 function merge(left, right){
     var result  = [],
