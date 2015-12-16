@@ -25,7 +25,7 @@ function insertionSort(items) {
          * in the unsorted section, shift all items in the sorted section over
          * by one. This creates space in which to insert the value.
          */
-        for (j=i-1; j > -1 &#038;&#038; items[j] > value; j--) {
+        for (j=i-1; j > -1 && items[j] > value; j--) {
             items[j+1] = items[j];
         }
 
