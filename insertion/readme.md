@@ -36,4 +36,4 @@ function insertionSort(items) {
 }
 ```
 
-(Source)[https://www.nczonline.net/blog/2012/09/17/computer-science-in-javascript-insertion-sort/]
+[Source](https://www.nczonline.net/blog/2012/09/17/computer-science-in-javascript-insertion-sort/)
