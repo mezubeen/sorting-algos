@@ -1,5 +1,12 @@
 # Merge Sort
 
+### Pseudo Code:
+
+1. If the list is of length 0 or 1, then it is already sorted. Otherwise:
+1. Divide the unsorted list into two sublists of about half the size.
+1. Sort each sublist recursively by re-applying merge sort.
+1. Merge the two sublists back into one sorted list.
+
 ![Merge Sort](./merge.png)
 
 ```js
@@ -42,4 +49,5 @@ console.log(mergeSort(a));
 ```
 
 [Source 1](https://en.wikipedia.org/wiki/Merge_sort)
-[Soruce 2](http://www.stoimen.com/blog/2010/07/02/friday-algorithms-javascript-merge-sort/)
+
+[Source 2](http://www.stoimen.com/blog/2010/07/02/friday-algorithms-javascript-merge-sort/)
