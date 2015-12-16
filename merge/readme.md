@@ -10,44 +10,62 @@
 ![Merge Sort](./merge.png)
 
 ```js
-var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
- 
-function mergeSort(arr)
-{
-    if (arr.length < 2)
-        return arr;
- 
-    var middle = parseInt(arr.length / 2);
-    var left   = arr.slice(0, middle);
-    var right  = arr.slice(middle, arr.length);
- 
-    return merge(mergeSort(left), mergeSort(right));
-}
- 
-function merge(left, right)
-{
-    var result = [];
- 
-    while (left.length && right.length) {
-        if (left[0] <= right[0]) {
-            result.push(left.shift());
+function merge(left, right){
+    var result  = [],
+        il      = 0,
+        ir      = 0;
+
+    while (il < left.length && ir < right.length){
+        if (left[il] < right[ir]){
+            result.push(left[il++]);
         } else {
-            result.push(right.shift());
+            result.push(right[ir++]);
         }
     }
- 
-    while (left.length)
-        result.push(left.shift());
- 
-    while (right.length)
-        result.push(right.shift());
- 
-    return result;
+
+    return result.concat(left.slice(il)).concat(right.slice(ir));
 }
- 
-console.log(mergeSort(a));
+```
+
+Version that returns a new array:
+
+```js
+function mergeSort(items){
+
+    // Terminal case: 0 or 1 item arrays don't need sorting
+    if (items.length < 2) {
+        return items;
+    }
+
+    var middle = Math.floor(items.length / 2),
+        left    = items.slice(0, middle),
+        right   = items.slice(middle);
+
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+
+In-place version:
+
+```js
+function mergeSort(items){
+
+    if (items.length < 2) {
+        return items;
+    }
+
+    var middle = Math.floor(items.length / 2),
+        left    = items.slice(0, middle),
+        right   = items.slice(middle),
+        params = merge(mergeSort(left), mergeSort(right));
+
+    // Add the arguments to replace everything between 0 and last item in the array
+    params.unshift(0, items.length);
+    items.splice.apply(items, params);
+    return items;
+}
 ```
 
 [Source 1](https://en.wikipedia.org/wiki/Merge_sort)
 
-[Source 2](http://www.stoimen.com/blog/2010/07/02/friday-algorithms-javascript-merge-sort/)
+[Source 2](https://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/)
