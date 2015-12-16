@@ -43,7 +43,7 @@ function mergeSort(items){
 
     return merge(mergeSort(left), mergeSort(right));
 }
-
+```
 
 In-place version:
 
